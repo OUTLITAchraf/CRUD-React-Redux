@@ -17,7 +17,6 @@ export default function UpdateFilm() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Update component state when film details change
     setTitle(film.title);
     setDescription(film.description);
     setReleasedate(film.Release_Date)
@@ -40,7 +39,6 @@ export default function UpdateFilm() {
   function handleGenres(event) {
     const { value, checked } = event.target;
 
-    // Add or remove the value from the array based on checkbox status
     if (checked) {
       setGenres((prevGenres) => [...prevGenres, value]);
     } else {
