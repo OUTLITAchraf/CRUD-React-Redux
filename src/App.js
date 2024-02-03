@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import ListFilm from './Componants/ListFilm';
+import AddFilm from './Componants/AddFilm';
+import UpdateFilm from './Componants/UpdateFilm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>CRUD REACT-REUX :</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<ListFilm/>} />
+          <Route path='/add-film' element={<AddFilm/>} />
+          <Route path='/update-film/:id' element={<UpdateFilm/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
