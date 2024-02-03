@@ -23,6 +23,8 @@ export default function AddFilm() {
     }
     function handleGenres(event) {
         const { value, checked } = event.target;
+
+        // Add or remove the value from the array based on checkbox status
         if (checked) {
             setGenres((prevGenres) => [...prevGenres, value]);
         } else {
